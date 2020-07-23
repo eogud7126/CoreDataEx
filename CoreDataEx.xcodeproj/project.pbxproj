@@ -16,6 +16,12 @@
 		CE6DC76824C93034007E5EB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE6DC76624C93034007E5EB3 /* LaunchScreen.storyboard */; };
 		CE6DC77324C93034007E5EB3 /* CoreDataExTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6DC77224C93034007E5EB3 /* CoreDataExTests.swift */; };
 		CE6DC77E24C93034007E5EB3 /* CoreDataExUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6DC77D24C93034007E5EB3 /* CoreDataExUITests.swift */; };
+		CE6DC78D24C930E8007E5EB3 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6DC78B24C930E8007E5EB3 /* User+CoreDataClass.swift */; };
+		CE6DC78E24C930E8007E5EB3 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6DC78C24C930E8007E5EB3 /* User+CoreDataProperties.swift */; };
+		CE6DC79024C93147007E5EB3 /* ContextManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6DC78F24C93147007E5EB3 /* ContextManager.swift */; };
+		CE6DC79224C93151007E5EB3 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6DC79124C93151007E5EB3 /* PersistenceManager.swift */; };
+		CE6DC79424C9315F007E5EB3 /* DataStoreCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6DC79324C9315F007E5EB3 /* DataStoreCoordinator.swift */; };
+		CE6DC79624C9317C007E5EB3 /* UserCRUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6DC79524C9317C007E5EB3 /* UserCRUD.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +57,12 @@
 		CE6DC77924C93034007E5EB3 /* CoreDataExUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataExUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE6DC77D24C93034007E5EB3 /* CoreDataExUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataExUITests.swift; sourceTree = "<group>"; };
 		CE6DC77F24C93034007E5EB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE6DC78B24C930E8007E5EB3 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CE6DC78C24C930E8007E5EB3 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CE6DC78F24C93147007E5EB3 /* ContextManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextManager.swift; sourceTree = "<group>"; };
+		CE6DC79124C93151007E5EB3 /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
+		CE6DC79324C9315F007E5EB3 /* DataStoreCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStoreCoordinator.swift; sourceTree = "<group>"; };
+		CE6DC79524C9317C007E5EB3 /* UserCRUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCRUD.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +93,8 @@
 		CE6DC74C24C93033007E5EB3 = {
 			isa = PBXGroup;
 			children = (
+				CE6DC78B24C930E8007E5EB3 /* User+CoreDataClass.swift */,
+				CE6DC78C24C930E8007E5EB3 /* User+CoreDataProperties.swift */,
 				CE6DC75724C93033007E5EB3 /* CoreDataEx */,
 				CE6DC77124C93034007E5EB3 /* CoreDataExTests */,
 				CE6DC77C24C93034007E5EB3 /* CoreDataExUITests */,
@@ -101,6 +115,7 @@
 		CE6DC75724C93033007E5EB3 /* CoreDataEx */ = {
 			isa = PBXGroup;
 			children = (
+				CE6DC79924C96934007E5EB3 /* CoreData */,
 				CE6DC75824C93033007E5EB3 /* AppDelegate.swift */,
 				CE6DC75A24C93033007E5EB3 /* SceneDelegate.swift */,
 				CE6DC75C24C93033007E5EB3 /* ViewController.swift */,
@@ -129,6 +144,17 @@
 				CE6DC77F24C93034007E5EB3 /* Info.plist */,
 			);
 			path = CoreDataExUITests;
+			sourceTree = "<group>";
+		};
+		CE6DC79924C96934007E5EB3 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				CE6DC79324C9315F007E5EB3 /* DataStoreCoordinator.swift */,
+				CE6DC78F24C93147007E5EB3 /* ContextManager.swift */,
+				CE6DC79124C93151007E5EB3 /* PersistenceManager.swift */,
+				CE6DC79524C9317C007E5EB3 /* UserCRUD.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,10 +288,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE6DC79024C93147007E5EB3 /* ContextManager.swift in Sources */,
+				CE6DC79424C9315F007E5EB3 /* DataStoreCoordinator.swift in Sources */,
 				CE6DC75D24C93033007E5EB3 /* ViewController.swift in Sources */,
 				CE6DC75924C93033007E5EB3 /* AppDelegate.swift in Sources */,
+				CE6DC79224C93151007E5EB3 /* PersistenceManager.swift in Sources */,
+				CE6DC78E24C930E8007E5EB3 /* User+CoreDataProperties.swift in Sources */,
+				CE6DC79624C9317C007E5EB3 /* UserCRUD.swift in Sources */,
 				CE6DC75B24C93033007E5EB3 /* SceneDelegate.swift in Sources */,
 				CE6DC76324C93033007E5EB3 /* CoreDataEx.xcdatamodeld in Sources */,
+				CE6DC78D24C930E8007E5EB3 /* User+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
